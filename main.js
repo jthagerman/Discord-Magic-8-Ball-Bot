@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 const client = new Discord.Client();
 const prefix = 'magic 8 ball'
-const key = "" //Put your own key here! 
+const key = process.env.DISCORD_API_KEY;
 const fs = require('fs');
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
